@@ -1,7 +1,6 @@
 apt update
 apt install -y sudo
-sudo apt install -y git libglib2.0-0 libnss3 wget unzip libxcb-shm0 libxcb-xkb1 libxcb-xinerama0
-sudo apt install -y libnss3 libgconf-2-4 libasound2
+sudo apt install -y git
 ################################
 ##安装python3.8
 sudo apt-get install -y software-properties-common
