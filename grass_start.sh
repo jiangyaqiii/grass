@@ -6,24 +6,20 @@ sudo apt install -y git
 sudo apt-get install -y software-properties-common
 echo -e "\n" |sudo add-apt-repository ppa:deadsnakes/ppa
 ###########
-# echo -e "2\n2" | sudo apt-get install -y expect
-# # # 编写跳过选项脚本
-# echo '#!/usr/bin/expect
-# spawn sudo apt-get install -y python3.8
-# expect "Geographic area:"
-# send "2\r"
-# expect "Time zone:"
-# send "2\r"
-# interact'>run_npm.expect
-# chmod +x run_npm.expect
-# ./run_npm.expect
-
-echo -e "2\n2\n" |sudo apt install -y python3.8
+##安装python3.10
+sudo apt install -y build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libsqlite3-dev wget libbz2-dev
+wget https://www.python.org/ftp/python/3.9.8/Python-3.9.8.tgz 
+tar -xf Python-3.9.8.tgz
+cd Python-3.9.8
+./configure --enable-optimizations
+make -j `nproc`
+sudo make altinstall
 ###########
 ################################
 ##安装pip
 sudo apt install -y python3-pip
 ################################
+cd ..
 git clone https://github.com/jiangyaqiii/grass.git
 cd grass
 pip3 install -r requirements.txt
