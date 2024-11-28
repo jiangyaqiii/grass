@@ -6,17 +6,19 @@ sudo apt install -y git
 sudo apt-get install -y software-properties-common
 echo -e "\n" |sudo add-apt-repository ppa:deadsnakes/ppa
 ###########
-echo -e "2\n2" | sudo apt-get install -y expect
-# # 编写跳过选项脚本
-echo '#!/usr/bin/expect
-spawn sudo apt-get install -y python3.8
-expect "Geographic area:"
-send "2\r"
-expect "Time zone:"
-send "2\r"
-interact'>run_npm.expect
-chmod +x run_npm.expect
-./run_npm.expect
+# echo -e "2\n2" | sudo apt-get install -y expect
+# # # 编写跳过选项脚本
+# echo '#!/usr/bin/expect
+# spawn sudo apt-get install -y python3.8
+# expect "Geographic area:"
+# send "2\r"
+# expect "Time zone:"
+# send "2\r"
+# interact'>run_npm.expect
+# chmod +x run_npm.expect
+# ./run_npm.expect
+
+echo -e "2\n2\n" |sudo apt install -y python3.8
 ###########
 ################################
 ##安装pip
