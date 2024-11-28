@@ -14,3 +14,8 @@ git clone https://github.com/jiangyaqiii/grass.git
 cd grass
 pip3 install -r requirements.txt
 pip3 install httpx 
+################################
+echo '$userid'>userid.txt
+echo '$token'>token.txt 
+################################
+python3 main.py
