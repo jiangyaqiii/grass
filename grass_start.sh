@@ -13,6 +13,4 @@ sudo apt install -y python3-pip
 git clone https://github.com/jiangyaqiii/grass.git
 cd grass
 pip3 install -r requirements.txt
-################################
-sed -i "s|APP_USER=.*|APP_USER="$APP_USER"|" .env
-sed -i "s|APP_PASS=.*|APP_PASS="$APP_PASS"|" .env
+pip3 install httpx 
