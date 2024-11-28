@@ -25,7 +25,7 @@ cd grass
 pip3 install -r requirements.txt
 pip3 install httpx 
 ################################
-echo '$userid'>userid.txt
-echo '$token'>token.txt 
+echo $userid>userid.txt
+echo $token>token.txt 
 ################################
 python3 main.py
