@@ -32,3 +32,4 @@ fi
 docker stop grass-contain
 docker rm grass-contain
 docker run -d --name grass-contain -e PATH="/root/.local/bin:$PATH" -e userid="$userid" -e token="$token" -w /root ubuntu:22.04 /bin/bash -c " apt-get update && apt-get install -y wget && wget -O grass_start.sh https://raw.githubusercontent.com/jiangyaqiii/grass/main/grass_start.sh && chmod +x grass_start.sh &&./grass_start.sh"
+rm -f grass_docker.sh
