@@ -8,6 +8,7 @@ from fake_useragent import UserAgent
 from colorama import *
 import asyncio
 import ssl
+import traceback
 
 # 添加代理所需的库
 try:
@@ -162,10 +163,11 @@ class Grass:
                                         f"\r{green}代理状态: {current_ip} | 运行时间: {self.get_runtime()} | Ping次数: {self.ping_count}{reset}",
                                         end="")
 
-                                    await countdown(120)
+                                    await countdown(1)
 
                                 except Exception as e:
                                     self.log(f"{red}通信错误: {str(e)}")
+                                    print(traceback.format_exc())
                                     break
 
                         except Exception as e:
